@@ -1,0 +1,96 @@
+.brokerage-container {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #101010;
+}
+
+.brokerage-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.brokerage-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  border: 1px solid #333;
+}
+
+.brokerage-table th,
+.brokerage-table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #333;
+}
+
+.brokerage-table th {
+  background-color: #1a1a1a;
+  font-weight: 600;
+  color: #3d7bff;
+}
+
+.brokerage-table tr:nth-child(even) {
+  background-color: #181818;
+}
+
+.brokerage-table tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
+
+.brokerage-table tr:hover {
+  background-color: #252525;
+}
+
+.category-header {
+  min-width: 120px;
+}
+
+.category-cell {
+  font-weight: 500;
+  color: #3d7bff;
+}
+
+.brokerage-note {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .brokerage-title {
+    font-size: 1.7rem;
+  }
+  
+  .brokerage-table th,
+  .brokerage-table td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .brokerage-container {
+    padding: 2rem 0.5rem;
+  }
+  
+  .brokerage-table th,
+  .brokerage-table td {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+} 

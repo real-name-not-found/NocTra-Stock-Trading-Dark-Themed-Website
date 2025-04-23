@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+  color: #ffffff;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
+/* Set global box-sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global accent color */
+:root {
+  --primary-color: #3d7bff;
+  --primary-hover: #2c66e4;
+  --text-color: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(70, 70, 70, 0.3);
+  --bg-dark: rgba(20, 20, 20, 0.7);
+  --bg-darker: rgba(18, 18, 18, 1);
+}
+
+.watchlist-container {
+    background-color: var(--bg-dark);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 16px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.watchlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.watchlist-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.watchlist-count {
+    background-color: rgba(61, 123, 255, 0.1);
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.search-container {
+    margin-bottom: 16px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: rgba(30, 30, 30, 0.7);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.search-bar::placeholder {
+    color: var(--text-muted);
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(61, 123, 255, 0.2);
+}
+
+.watchlist-table {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.watchlist-table-header {
+    display: flex;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.watchlist-items {
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 4px; /* Add padding for scrollbar */
+}
+
+/* Custom scrollbar for watchlist */
+.watchlist-items::-webkit-scrollbar {
+    width: 4px;
+}
+
+.watchlist-items::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.2);
+    border-radius: 4px;
+}
+
+.watchlist-items::-webkit-scrollbar-thumb {
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 4px;
+}
+
+.watchlist-items::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.7);
+}
+
+.watchlist-item {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(70, 70, 70, 0.2);
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.watchlist-item:last-child {
+    border-bottom: none;
+}
+
+.watchlist-item:hover {
+    background-color: rgba(70, 70, 70, 0.1);
+}
+
+.watchlist-item-options {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 6px 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.option-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.buy-action {
+    color: #00c853;
+    background-color: rgba(0, 200, 83, 0.1);
+}
+
+.buy-action:hover {
+    background-color: rgba(0, 200, 83, 0.2);
+}
+
+.sell-action {
+    color: #ff3d00;
+    background-color: rgba(255, 61, 0, 0.1);
+}
+
+.sell-action:hover {
+    background-color: rgba(255, 61, 0, 0.2);
+}
+
+.chart-icon {
+    color: var(--primary-color);
+    background-color: rgba(61, 123, 255, 0.1);
+}
+
+.chart-icon:hover {
+    background-color: rgba(61, 123, 255, 0.2);
+}
+
+.col {
+    padding: 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.symbol-col {
+    flex: 2;
+    font-weight: 500;
+}
+
+.price-col {
+    flex: 1;
+    text-align: right;
+}
+
+.change-col {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.positive {
+    color: #00c853;
+}
+
+.negative {
+    color: #ff3d00;
+}
+
+.empty-watchlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.empty-watchlist p {
+    margin: 5px 0;
+}
+
+.empty-instruction {
+    font-size: 13px;
+    opacity: 0.7;
+}

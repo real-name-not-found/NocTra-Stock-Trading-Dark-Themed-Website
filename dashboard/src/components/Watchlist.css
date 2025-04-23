@@ -1,0 +1,200 @@
+/* Watchlist styles now in index.css */ 
+
+/* Common Menu Styles */
+.buy-menu, .sell-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #121212;
+    border-radius: 8px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    width: 280px;
+    z-index: 1000;
+    color: #e4e6eb;
+    border: 1px solid #333;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .buy-menu, .sell-menu {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+.buy-menu h3, .sell-menu h3 {
+    margin-top: 0;
+    color: #e4e6eb;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+}
+
+.buy-menu-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.buy-menu-field {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.buy-menu-field label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+
+.buy-menu-field input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #1e1e1e;
+    color: #e4e6eb;
+}
+
+.buy-menu-field input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.buy-menu-total {
+    text-align: right;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #e4e6eb;
+    background-color: #1e1e1e;
+    padding: 8px 10px;
+    border-radius: 4px;
+}
+
+/* Holdings information in sell menu */
+.available-shares {
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    background-color: #1e1e1e;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #4caf50;
+    text-align: center;
+}
+
+.loading-holdings {
+    margin: 15px 0;
+    text-align: center;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Order status styles */
+.order-status {
+    margin-bottom: 15px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #1e1e1e;
+    color: #4caf50;
+}
+
+.order-status.error {
+    color: #f44336;
+}
+
+.buy-menu-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buy-menu-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.2s ease;
+}
+
+.buy-menu-actions button:first-child {
+    background-color: #333;
+    color: #e4e6eb;
+}
+
+.buy-menu-actions button:first-child:hover {
+    background-color: #444;
+}
+
+.buy-menu-actions button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Buy button */
+.confirm-buy {
+    background-color: #4caf50;
+    color: white;
+}
+
+.confirm-buy:hover {
+    background-color: #45a049;
+}
+
+/* Sell button */
+.confirm-sell {
+    background-color: #f44336;
+    color: white;
+}
+
+.confirm-sell:hover {
+    background-color: #e53935;
+}
+
+/* Make sure the watchlist item has position relative for the absolute positioning to work */
+.watchlist-item {
+    position: relative;
+}
+
+/* Ensure buy/sell buttons have proper cursor */
+.option-action {
+    cursor: pointer;
+}
+
+/* Improve chart icon cursor */
+.chart-icon {
+    cursor: pointer;
+}
+
+/* Price change animations */
+@keyframes priceUp {
+    0% { background-color: rgba(0, 200, 83, 0.3); }
+    100% { background-color: transparent; }
+}
+
+@keyframes priceDown {
+    0% { background-color: rgba(255, 82, 82, 0.3); }
+    100% { background-color: transparent; }
+}
+
+.price-up-animation {
+    animation: priceUp 2s ease-out;
+}
+
+.price-down-animation {
+    animation: priceDown 2s ease-out;
+} 

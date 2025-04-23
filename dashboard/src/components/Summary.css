@@ -1,0 +1,141 @@
+.summary-container {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.welcome-section {
+    margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: var(--text-color);
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 15px 0;
+}
+
+.summary-section {
+    background-color: rgba(30, 30, 30, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+    min-height: 140px;
+}
+
+.summary-col {
+    flex: 1;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: var(--text-color);
+}
+
+.summary-value {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    line-height: 1.1;
+    height: auto;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+}
+
+.summary-value.positive {
+    color: #00c853;
+}
+
+.summary-value.negative {
+    color: #FF5252;
+}
+
+.summary-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.vertical-divider {
+    width: 1px;
+    background-color: var(--border-color);
+    margin: 0 15px;
+    height: 90px;
+    align-self: center;
+}
+
+.margin-details, .holding-details {
+    padding-top: 10px;
+}
+
+.margin-item, .holding-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.margin-label, .holding-label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.margin-value, .holding-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.margin-value.positive-value {
+    color: #00c853;
+    font-weight: 600;
+}
+
+.margin-value.negative-value {
+    color: #FF5252;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .summary-row {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .vertical-divider {
+        width: 100%;
+        height: 1px;
+        margin: 15px 0;
+    }
+    
+    .summary-col {
+        padding: 0;
+    }
+    
+    .summary-value {
+        font-size: 28px;
+        min-height: 46px;
+    }
+} 

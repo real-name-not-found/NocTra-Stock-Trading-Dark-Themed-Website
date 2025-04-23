@@ -1,0 +1,171 @@
+.funds-container {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.funds-header {
+    margin-bottom: 20px;
+}
+
+.funds-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.funds-summary {
+    background-color: rgba(30, 30, 30, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.summary-balance {
+    flex: 1;
+    min-width: 200px;
+}
+
+.summary-balance h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin: 0 0 10px 0;
+}
+
+.balance-amount {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.balance-amount.positive {
+    color: #00c853;
+}
+
+.balance-amount.negative {
+    color: #ff3d00;
+}
+
+.balance-note {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-funds-btn, .withdraw-btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.add-funds-btn {
+    background-color: #00c853;
+    color: white;
+}
+
+.add-funds-btn:hover {
+    background-color: #00b34a;
+}
+
+.withdraw-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.withdraw-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.funds-details {
+    background-color: rgba(30, 30, 30, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+.funds-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(70, 70, 70, 0.2);
+}
+
+.funds-item:last-child {
+    border-bottom: none;
+}
+
+.funds-item.highlight {
+    background-color: rgba(50, 50, 50, 0.3);
+    margin: 0 -20px;
+    padding: 12px 20px;
+    border-bottom: none;
+    margin-bottom: 1px;
+}
+
+.item-label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.item-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.item-value.positive {
+    color: #00c853;
+}
+
+.item-value.negative {
+    color: #ff3d00;
+}
+
+.section-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 15px 0;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 15px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .funds-summary {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .summary-balance {
+        margin-bottom: 10px;
+    }
+    
+    .action-buttons {
+        width: 100%;
+    }
+    
+    .add-funds-btn, .withdraw-btn {
+        flex: 1;
+    }
+} 

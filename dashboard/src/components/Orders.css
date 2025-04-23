@@ -1,0 +1,114 @@
+.orders-container {
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-with-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.orders-header h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.loading-indicator {
+    color: #8A8D91;
+    font-size: 14px;
+}
+
+.refresh-button {
+    background-color: #2F3136;
+    border: none;
+    color: #C9CACC;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.refresh-button:hover {
+    background-color: #3F4248;
+}
+
+.no-orders {
+    text-align: center;
+    color: #8A8D91;
+    padding: 40px 0;
+}
+
+.orders-table-container {
+    overflow-x: auto;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #C9CACC;
+}
+
+.orders-table th {
+    background-color: #2F3136;
+    padding: 10px 15px;
+    text-align: left;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.orders-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #2F3136;
+}
+
+.orders-table tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table tr:hover {
+    background-color: rgba(47, 49, 54, 0.5);
+}
+
+.buy-type {
+    color: #4EAF0A;
+    font-weight: bold;
+}
+
+.sell-type {
+    color: #FF5252;
+    font-weight: bold;
+}
+
+.order-status-executed {
+    background-color: #304D30;
+    color: #4EAF0A;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.buy-order {
+    border-left: 3px solid #4EAF0A;
+}
+
+.sell-order {
+    border-left: 3px solid #FF5252;
+} 

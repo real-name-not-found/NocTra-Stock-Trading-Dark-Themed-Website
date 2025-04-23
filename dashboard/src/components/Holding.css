@@ -1,0 +1,182 @@
+.holding-container {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+    min-height: 400px;
+}
+
+.holding-header {
+    margin-bottom: 20px;
+}
+
+.holding-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.holding-table-container {
+    background-color: rgba(30, 30, 30, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.holding-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.holding-table thead {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.holding-table th {
+    text-align: right;
+    padding: 12px 15px;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.holding-table th.name-col {
+    text-align: left;
+}
+
+.holding-table td {
+    padding: 16px 15px;
+    text-align: right;
+    border-bottom: 1px solid rgba(70, 70, 70, 0.2);
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.holding-table td.name-col {
+    text-align: left;
+    white-space: normal;
+    min-width: 180px;
+    max-width: 250px;
+}
+
+.holding-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.holding-table tbody tr:hover {
+    background-color: rgba(70, 70, 70, 0.1);
+}
+
+.holding-table .positive, 
+.holding-table .negative {
+    transition: color 0.3s ease;
+}
+
+.positive {
+    color: #00c853;
+}
+
+.negative {
+    color: #ff3d00;
+}
+
+.holdings-summary {
+    background-color: rgba(30, 30, 30, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.summary-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.summary-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .holding-table-container {
+        padding: 15px;
+    }
+    
+    .holding-table th,
+    .holding-table td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .holdings-summary {
+        flex-direction: column;
+    }
+    
+    .summary-item {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    
+    .summary-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Header with refresh button */
+.header-with-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.refresh-button {
+    background-color: #333;
+    color: #e4e6eb;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.refresh-button:hover {
+    background-color: #444;
+}
+
+/* Add styles for loading indicator */
+.loading-indicator {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Add styles for no holdings message */
+.no-holdings {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    font-style: italic;
+} 
